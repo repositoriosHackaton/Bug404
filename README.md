@@ -1,66 +1,41 @@
 # Bug404
-En este espacio se sube el código creado para el grupo 
-
-Se debe agregar toda la documentación que ustedes consideren pertinente para la compresión de los modelos usados, la ejecución del código y los resultados obtenidos. 
-Puden, si desean, agregar imágenes o resultados obtenidos. 
-
-Recuerden que este readme es su puerta de entrada para su proyecto. 
-
-Un ejemplo puede ser: 
-# Nombre del Proyecto
-
-Breve descripción del proyecto.
-
-## Tabla de contenidos
-
-1. [Nombre](#Nombre)
-2. [Descripción](#descripción)
-3. [Arquitectura](#Arquitectura)
-4. [Proceso](#Proceso)
-5. [Funcionalidades](#Funcionalidades)
-6. [Estado del proyecto](#EstadoDelProyecto)
-7. [Agradecimientos](#Agradecimientos)
-
 
 * Nombre del proyecto
+    Emotion explorers
 
-* Breve descripción del proyecto -> Alguna imagen o gif que muestre el proyecto
+* Breve descripción del proyecto 
+    Interfaz interactiva alimentada a través de una red neuronal de lectura de imágenes dirigida a niños en edad preescolar donde podrá enviar imágenes de emociones y a la vez, se les dará un feeback de cómo manejar dichas emociones, permitiendo así, la prevención de diversos casos de mal manejo de emociones.
+    C:\Users\allye\OneDrive\Desktop\SIC-Hackaton\Bug404\image.png
+    C:\Users\allye\OneDrive\Desktop\SIC-Hackaton\Bug404\image-1.png
+    C:\Users\allye\OneDrive\Desktop\SIC-Hackaton\Bug404\image-2.png
+
 
 * Arquitectura del proyecto + imagen
+    El modelo es una red neuronal convolucional (CNN) que consta de múltiples capas convolucionales seguidas de capas de pooling para la reducción de dimensionalidad, capas de aplanado para convertir las salidas 3D a 1D, y capas densas para la salida final. La arquitectura está diseñada para procesar imágenes de entrada de 200x200 píxeles y producir una salida de 8 unidades con activación lineal, adecuada para tareas de regresión.
+
 
 * Proceso de desarrollo:
+    - Escogencia del dataset desde Kaggle
+        URL: https://www.kaggle.com/datasets/mh0386/facial-emotion
+    - Armado de la red neuronal convolucional
+    - Alimentación del modelo con las imágenes del dataset.
+    - Guardado del modelo en un archivo h5.
+    - Creación de la interfaz.
+    - Evaluación de las imágenes recibidas de acuerdo a lo que ya poseía el modelo.
+    -Crear salida para el usuario.
 
--Fuente del dataset
--Limpieza de datos (img que lo valide)
--Manejo excepciones/control errores
+
 -¿Qué modelo de Machine Learning están usando?
--Estadísticos (Valores, gráficos, …)
--Métrica(s) de evaluación del modelo
+    Modelo Convolucional
+
+
+-Métrica(s) de evaluación del modelo:
+    Precisión y pérdida de datos
 
 * Funcionalidades extra:
+    Apoyo a psicológos para la detección temprana de problemas socioemocionales.
 
-Ejem 1: Implementación de chatbot
-- Tecnología/Herramientas usadas (Librería, Framework, …)
-- Arquitectura (img)
-- Indicar fuente del dataset
-- Limpieza de datos (ejem: se usó PLN + img que lo validen)
-- Manejo excepciones/control errores
-- En caso de usar un modelo de ML indicar ¿Qué modelo de Machine Learning están usando?
-- Estadísticos (Valores, gráficos, …)
-- Métrica(s) de evaluación del modelo
 
-Ejem 2: Integración del proyecto en una pág web
-- Tecnología/Herramientas usadas …
-- Arquitectura (img)
-
-Ejem 3: Integración del proyecto en un canal WhatsApp, Discord, Telegram, Correo, …
-- Tecnología/Herramientas usadas …
-- Arquitectura (img)
-
-Ejem 4: Desarrollo de interfaz gráfica de usuario
-- Tecnología/Herramientas usadas …
-- Arquitectura (img)
-
-Ejem …: …
-- Tecnología/Herramientas usadas …
-
+* Creación de la interfaz
+- Herramientas utilizadas:
+Tkinder
